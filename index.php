@@ -4,16 +4,13 @@
     date_default_timezone_set("Brazil/East");
 
     const SERVIDOR = "localhost";
-    const BANCO = "investteimoveisb_imob";
-    const USUARIO = "investteimoveisb_imob";
-    const SENHA = "Investt@135@";
-    const PASTA = "";
-    const AUTOR = "Clemerson Lucas de Olveiria";
+    const BANCO = "banco_de_dados";
+    const USUARIO = "usuario_do_banco";
+    const SENHA = "senha_do_banco";
 
-
-    define("DOMINIO", (isset($_SERVER['HTTPS']) ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . "/");
-    define("PASTA_CLIENTE", DOMINIO."arquivos/");
-    define("AUTOR", AUTOR);
+    define("DOMINIO", (isset($_SERVER['HTTPS']) ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . "/portalsaude/");
+    define("PASTA", DOMINIO."arquivos/");
+    define("AUTOR", "Clemerson Lucas de Olveiria");
     define("CONTROLLERS", "controllers/");
     define("VIEWS", "views/");
     define("MODELS", "models/");
@@ -23,8 +20,7 @@
     require_once('system/mysql.php');
     require_once('system/controller.php');
 
-    function auto_carregar($arquivo)
-    {
+    function auto_carregar($arquivo){
         if (file_exists(MODELS . $arquivo . ".php")) {
             require_once(MODELS . $arquivo . ".php");
         } else {
