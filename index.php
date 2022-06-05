@@ -4,9 +4,9 @@
     date_default_timezone_set("Brazil/East");
 
     const SERVIDOR = "localhost";
-    const BANCO = "banco_de_dados";
-    const USUARIO = "usuario_do_banco";
-    const SENHA = "senha_do_banco";
+    const BANCO = "portalsaude";
+    const USUARIO = "usuariosaude";
+    const SENHA = "23a2832e93b531a81166f";
 
     define("DOMINIO", (isset($_SERVER['HTTPS']) ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . "/portalsaude/");
     define("PASTA", DOMINIO."arquivos/");
